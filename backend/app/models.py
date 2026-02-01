@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Integer, String, DateTime, Text
+from sqlalchemy import Column, Integer, String, DateTime, Text, ForeignKey, Float
 from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import relationship
 from datetime import datetime
 
 Base = declarative_base()
@@ -17,3 +18,17 @@ class Job(Base):
     title = Column(String(255), nullable=False)
     description = Column(Text, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
+
+class MatchingScore(Base):
+    __tablename__ = "matching_score"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+
+    cv_id = Column(Integer, ForeignKey("cv.id"))
+    job_id = Column(Integer, ForeignKey("job.id"))
+
+    score = Column(Float, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    cv = relationship("CV")
+    job = relationship("Job")
