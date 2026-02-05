@@ -25,9 +25,7 @@ L’objectif est d’aider les recruteurs à :
 - 🏆 Classement automatique des CV
 - 💾 Sauvegarde des données et scores en base MySQL
 
-## 🏗️ Architecture du projet
-
-## 🏗️ Architecture technique
+## 🏗️ Architecture technique du projet
 
 ### Backend
 Le backend assure la gestion des données, le traitement IA et l’exposition des services via une API REST.
@@ -59,5 +57,6 @@ Le frontend fournit une interface web intuitive destinée aux recruteurs pour ex
 ### 👩‍💻 Aya Essouiri
 Étudiante en **Transformation Digitale & Intelligence Artificielle**  
 **ENSAH – Al Hoceima**
+
 
 
