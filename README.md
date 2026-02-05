@@ -34,17 +34,11 @@ Le backend assure la gestion des données, le traitement IA et l’exposition de
 - **Base de données** : MySQL (hébergée sur Clever Cloud)
 - **ORM** : SQLAlchemy
 - **Traitement IA / NLP** : Le traitement intelligent repose sur plusieurs étapes complémentaires allant de l’extraction du texte jusqu’au calcul du score de pertinence.
-- **Extraction du texte (CV)**  
-  Conversion des fichiers PDF et DOCX en texte brut exploitable.
-  - `pdfplumber` : extraction du contenu des fichiers PDF
-  - `python-docx (docx)` : lecture et extraction des fichiers DOCX
-
-- **HuggingFace Transformers – BERT**  
-  Utilisé pour la **vectorisation sémantique** des CV et des descriptions de poste, permettant une comparaison contextuelle avancée entre les textes.
-
-- **Scikit-learn**  
-  Employé pour le calcul de la **similarité cosinus** et le **scoring de matching**, afin de classer les candidats selon leur adéquation avec l’offre d’emploi.
-
+  - Extraction du texte (CV): Conversion des fichiers PDF et DOCX en texte brut exploitable.
+    - `pdfplumber` : extraction du contenu des fichiers PDF
+    - `python-docx (docx)` : lecture et extraction des fichiers DOCX
+  - HuggingFace Transformers – BERT: Utilisé pour la **vectorisation sémantique** des CV et des descriptions de poste, permettant une comparaison contextuelle avancée entre les textes.
+  - Scikit-learn: Employé pour le calcul de la **similarité cosinus** et le **scoring de matching**, afin de classer les candidats selon leur adéquation avec l’offre d’emploi.
 
 ### Frontend
 Le frontend fournit une interface web intuitive destinée aux recruteurs pour exploiter les résultats de l’analyse intelligente.
