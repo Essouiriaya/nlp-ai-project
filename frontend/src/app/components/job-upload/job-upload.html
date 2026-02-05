@@ -1,1 +1,10 @@
-<p>job-upload works!</p>
+<div class="job-container">
+  <h2>Ajouter une offre d'emploi</h2>
+
+  <input type="text" placeholder="Titre du poste" [(ngModel)]="title" />
+  <textarea placeholder="Description du poste" [(ngModel)]="description"></textarea>
+
+  <button (click)="addJob()" [disabled]="!title || !description">Enregistrer</button>
+
+  <div *ngIf="message" class="message">{{ message }}</div>
+</div>

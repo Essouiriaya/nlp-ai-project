@@ -1,1 +1,26 @@
-<p>ranking works!</p>
+<div class="ranking-container">
+  <h2>Classement des CVs pour un Job</h2>
+
+  <select [(ngModel)]="selectedJobId">
+    <option *ngFor="let job of jobs" [value]="job.id">{{ job.title }}</option>
+  </select>
+
+  <button (click)="runMatching()" [disabled]="!selectedJobId">Lancer Matching</button>
+
+  <div *ngIf="loading">Chargement...</div>
+
+  <table *ngIf="cvList.length > 0">
+    <thead>
+      <tr>
+        <th>Nom CV</th>
+        <th>Score (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cv of cvList">
+        <td>{{ cv.filename }}</td>
+        <td>{{ cv.score | number:'1.0-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
