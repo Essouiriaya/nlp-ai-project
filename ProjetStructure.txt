@@ -1,12 +1,9 @@
-# File Tree: ProjetNLP
+File Tree: ProjetNLP
+Generated on: 2/8/2026, 12:36:08 PM
 
-**Generated:** 2/4/2026, 6:28:18 PM
-**Root Path:** `c:\Users\hp\projects\ProjetNLP`
-
-```
-├── 📁 backend
-│   ├── 📁 app
-│   │   ├── 📁 ia_module
+├── 📁 backend/
+│   ├── 📁 app/
+│   │   ├── 📁 ia_module/
 │   │   │   ├── 🐍 __init__.py
 │   │   │   ├── 🐍 extraction.py
 │   │   │   ├── 🐍 matching.py
@@ -18,38 +15,38 @@
 │   │   ├── 🐍 main.py
 │   │   ├── 🐍 models.py
 │   │   └── 🐍 utils.py
-│   ├── 📁 uploads
+│   ├── 📁 uploads/
 │   │   ├── 📕 Essouiri Aya CV.pdf
 │   │   └── 📕 Essouiri_Aya_CV.pdf
 │   ├── 📝 README.md
 │   └── 📄 requirements.txt
-├── 📁 data
-│   ├── 📁 cv_exemples
-│   └── 📁 job_examples
-├── 📁 docs
-├── 📁 frontend
-│   ├── 📁 .angular
-│   ├── 📁 public
+├── 📁 data/
+│   ├── 📁 cv_exemples/
+│   └── 📁 job_examples/
+├── 📁 docs/
+├── 📁 frontend/
+│   ├── 📁 .angular/
+│   ├── 📁 public/
 │   │   └── 📄 favicon.ico
-│   ├── 📁 src
-│   │   ├── 📁 app
-│   │   │   ├── 📁 components
-│   │   │   │   ├── 📁 job-upload
+│   ├── 📁 src/
+│   │   ├── 📁 app/
+│   │   │   ├── 📁 components/
+│   │   │   │   ├── 📁 job-upload/
 │   │   │   │   │   ├── 🎨 job-upload.css
 │   │   │   │   │   ├── 🌐 job-upload.html
 │   │   │   │   │   ├── 📄 job-upload.spec.ts
 │   │   │   │   │   └── 📄 job-upload.ts
-│   │   │   │   ├── 📁 ranking
+│   │   │   │   ├── 📁 ranking/
 │   │   │   │   │   ├── 🎨 ranking.css
 │   │   │   │   │   ├── 🌐 ranking.html
 │   │   │   │   │   ├── 📄 ranking.spec.ts
 │   │   │   │   │   └── 📄 ranking.ts
-│   │   │   │   └── 📁 upload-cv
+│   │   │   │   └── 📁 upload-cv/
 │   │   │   │       ├── 🎨 upload-cv.css
 │   │   │   │       ├── 🌐 upload-cv.html
 │   │   │   │       ├── 📄 upload-cv.spec.ts
 │   │   │   │       └── 📄 upload-cv.ts
-│   │   │   ├── 📁 services
+│   │   │   ├── 📁 services/
 │   │   │   │   ├── 📄 api.spec.ts
 │   │   │   │   └── 📄 api.ts
 │   │   │   ├── 📄 app.config.ts
@@ -58,6 +55,9 @@
 │   │   │   ├── 📄 app.routes.ts
 │   │   │   ├── 📄 app.spec.ts
 │   │   │   └── 📄 app.ts
+│   │   ├── 📁 assets/
+│   │   │   └── 📁 images/
+│   │   │       └── 🖼️ logo.png
 │   │   ├── 🌐 index.html
 │   │   ├── 📄 main.ts
 │   │   └── 🎨 styles.css
@@ -72,4 +72,3 @@
 │   └── ⚙️ tsconfig.spec.json
 ├── ⚙️ .gitignore
 └── 📝 README.md
-```

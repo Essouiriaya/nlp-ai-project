@@ -1,7 +1,20 @@
-<div class="upload-container">
-  <h2>Uploader un CV</h2>
-  <input type="file" (change)="onFileSelected($event)" />
-  <button (click)="uploadCV()" [disabled]="!selectedFile">Uploader</button>
+<div class="card shadow-sm mx-auto mt-5" style="max-width: 500px;">
+  <div class="card-body">
+    <h2 class="card-title text-center mb-4">Uploader un CV</h2>
 
-  <div *ngIf="message" class="message">{{ message }}</div>
+    <div class="mb-3">
+      <label class="form-label">Choisir un fichier :</label>
+      <input type="file" (change)="onFileSelected($event)" class="form-control"/>
+    </div>
+
+    <button (click)="uploadCV()" 
+            [disabled]="!selectedFile"
+            class="btn btn-primary w-100">
+      Uploader
+    </button>
+
+    <div *ngIf="message" class="alert alert-success text-center mt-3">
+      {{ message }}
+    </div>
+  </div>
 </div>
