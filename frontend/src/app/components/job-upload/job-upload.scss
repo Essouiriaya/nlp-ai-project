@@ -1,0 +1,140 @@
+// Variables
+$primary-color: #2563eb;
+$success-color: #10b981;
+$border-radius: 1rem;
+$transition-speed: 0.3s;
+
+// Card Enhancements
+.card {
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+// Form Controls Enhancement
+.form-control {
+  border-radius: 0.5rem;
+  border: 2px solid #e5e7eb;
+  transition: all $transition-speed ease;
+  
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.1);
+  }
+  
+  &.is-invalid {
+    border-color: #ef4444;
+    background-image: none;
+  }
+}
+
+// Input Group Styling
+.input-group-text {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: 2px solid #e5e7eb;
+  border-right: none;
+}
+
+// Button Enhancements
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all $transition-speed ease;
+  
+  &-primary {
+    background: linear-gradient(135deg, $primary-color 0%, #1d4ed8 100%);
+    border: none;
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+  
+  &-outline-secondary {
+    border: 2px solid #e5e7eb;
+    
+    &:hover {
+      background-color: #f3f4f6;
+      border-color: #d1d5db;
+    }
+  }
+}
+
+// Alert Animation
+.alert {
+  animation: slideIn 0.4s ease-out;
+  border-radius: $border-radius;
+  
+  &-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #065f46;
+  }
+}
+
+// Step Indicator
+.step-indicator {
+  .badge {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+}
+
+// Icon Wrapper
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+// Animations
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  .btn-lg {
+    width: 100%;
+  }
+}
+
+// Character Counter Positioning
+.position-relative textarea {
+  padding-bottom: 2rem;
+}
+
+// Focus States for Accessibility
+*:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}

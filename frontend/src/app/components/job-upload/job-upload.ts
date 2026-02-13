@@ -10,12 +10,13 @@ import { HttpClientModule } from '@angular/common/http'
   standalone: true,
   imports: [FormsModule, CommonModule, HttpClientModule],
   templateUrl: './job-upload.html',
-  styleUrls: ['./job-upload.css']
+  styleUrls: ['./job-upload.scss']
 })
 export class JobUploadComponent {
   title: string = '';
   description: string = '';
   message: string = '';
+  isLoading: boolean = false;
 
   constructor(private apiService: ApiService) {}
 
@@ -26,5 +27,11 @@ export class JobUploadComponent {
       next: (res) => this.message = `Offre "${res.title}" ajoutée avec succès !`,
       error: (err) => this.message = 'Erreur lors de l’ajout du job, réessayez.'
     });
+  }
+
+  resetForm() {
+    this.title = '';
+    this.description = '';
+    this.message = '';
   }
 }
