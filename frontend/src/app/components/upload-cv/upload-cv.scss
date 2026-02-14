@@ -1,0 +1,277 @@
+// ==========================================
+// VARIABLES
+// ==========================================
+$primary: #2563eb;
+$primary-dark: #1d4ed8;
+$success: #10b981;
+$danger: #ef4444;
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #a2a2a3;
+$gray-600: #4b5563;
+$gray-800: #1f2937;
+
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
+$transition-speed: 0.3s;
+
+.upload-header-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  
+  i {
+    color: $primary;
+  }
+}
+
+// ==========================================
+// CARD STYLING
+// ==========================================
+.card {
+  border: none;
+  border-radius: $border-radius-lg;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+}
+
+// ==========================================
+// FORM STYLING
+// ==========================================
+.form-label {
+  font-size: 30px;
+  
+  i {
+    color: $primary;
+  }
+}
+
+.form-control-lg {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  border: 2px solid $gray-200;
+  border-radius: $border-radius;
+  transition: all $transition-speed;
+  
+  &:hover {
+    border-color: $gray-300;
+  }
+  
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.1);
+  }
+  
+  &.is-valid {
+    border-color: $success;
+    background-image: none;
+    padding-right: 1.25rem;
+  }
+}
+
+.form-text {
+  font-size: 0.8125rem;
+  color: $gray-600;
+  
+  i {
+    color: $primary;
+  }
+}
+
+// ==========================================
+// FILE PREVIEW
+// ==========================================
+.file-preview {
+  .bg-light {
+    background-color: rgba(16, 185, 129, 0.05) !important;
+  }
+  
+  .file-icon {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .file-name {
+    font-size: 0.9375rem;
+    margin-bottom: 0.125rem;
+  }
+  
+  .btn-link {
+    opacity: 0.6;
+    transition: opacity $transition-speed;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// ==========================================
+// BUTTON STYLING
+// ==========================================
+.btn-primary {
+  background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+  border: none;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: $border-radius;
+  transition: all $transition-speed;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: $gray-200;
+  }
+}
+
+// ==========================================
+// ALERT STYLING
+// ==========================================
+.alert {
+  border-radius: $border-radius-lg;
+  border: none;
+  padding: 1rem 1.25rem;
+  
+  &.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: #065f46;
+    
+    .alert-icon i {
+      color: $success;
+    }
+  }
+  
+  &.alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: #991b1b;
+    
+    .alert-icon i {
+      color: $danger;
+    }
+  }
+  
+  .btn-close {
+    padding: 1rem;
+    opacity: 0.5;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// ==========================================
+// TIPS CARD
+// ==========================================
+.card {
+  .card-body {
+    h6 {
+      i {
+        color: #f59e0b;
+      }
+    }
+    
+    li {
+      i {
+        font-size: 0.75rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// ==========================================
+// ANIMATIONS
+// ==========================================
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+// ==========================================
+// RESPONSIVE
+// ==========================================
+@media (max-width: 768px) {
+  .upload-header-icon {
+    width: 80px;
+    height: 80px;
+    
+    i {
+      font-size: 2rem;
+    }
+  }
+  
+  .card {
+    .card-body {
+      padding: 1.5rem;
+    }
+  }
+  
+  .file-preview {
+    .file-icon {
+      width: 40px;
+      height: 40px;
+      
+      i {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
