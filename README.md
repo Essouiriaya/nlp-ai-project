@@ -52,13 +52,14 @@ Le frontend fournit une interface web intuitive destinée aux recruteurs pour ex
 **Technologies utilisées :**
 - Angular
 - TypeScript
-- Bootstrap / Tailwind CSS
+- Bootstrap 
 - Chart.js (visualisation des statistiques)
 
 
 ### 👩‍💻 Aya Essouiri
 Étudiante en **Transformation Digitale & Intelligence Artificielle**  
 **ENSAH – Al Hoceima**
+
 
 
 
