@@ -1,45 +1,33 @@
 <div class="container-fluid py-5 bg-light min-vh-100 mt-5">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-8 col-xl-6">
-      <div class="text-center mb-5">
+    <div class="col-12 col-lg-8 col-xl-8">
+      <div class="text-center mb-4">
         <div class="icon-wrapper mb-3">
-          <i class="bi bi-briefcase-fill text-primary display-5"></i>
+          <i class="bi bi-briefcase-fill text-primary display-6"></i>
         </div>
         <h1 class="h3 fw-bold text-dark mb-2">Nouvelle offre d'emploi</h1>
         <p class="text-muted">Créez une nouvelle offre pour commencer le processus de sélection</p>
       </div>
       <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-        <div class="card-header bg-white border-bottom border-light py-4">
-          <div class="d-flex align-items-center">
-            <div class="step-indicator me-3">
-              <span class="badge bg-primary rounded-pill">1</span>
-            </div>
-            <div>
-              <h5 class="mb-0 fw-semibold">Détails du poste</h5>
-              <small class="text-muted">Remplissez les informations ci-dessous</small>
-            </div>
+        <div class="card-body p-4 mt-0">
+          <div class="mb-4">
+            <h5 class="mb-0 fw-semibold">Détails du poste</h5>
+            <small class="text-muted">Remplissez les informations ci-dessous</small>
           </div>
-        </div>
-
-        <!-- Card Body -->
-        <div class="card-body p-4 p-md-5">
           <form (ngSubmit)="addJob()" #jobForm="ngForm">
             <div class="mb-4">
               <label for="jobTitle" class="form-label fw-medium text-dark">
                 Titre du poste <span class="text-danger">*</span>
               </label>
               <div class="input-group input-group-lg has-validation">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="bi bi-type-h1 text-muted"></i>
-                </span>
                 <input 
                   type="text" 
                   id="jobTitle"
                   [(ngModel)]="title" 
                   name="title"
                   #titleInput="ngModel"
-                  placeholder="ex: Développeur Full Stack Senior" 
-                  class="form-control border-start-0 ps-0"
+                  placeholder="Ex: Développeur Full Stack Senior" 
+                  class="form-control"
                   [class.is-invalid]="titleInput.invalid && titleInput.touched"
                   required
                   minlength="3"
@@ -81,7 +69,7 @@
                 La description doit contenir au moins 50 caractères
               </div>
             </div>
-            <div class="d-grid gap-3 d-md-flex justify-content-md-end mt-5">
+            <div class="d-grid gap-3 d-md-flex justify-content-center mt-5">
               <button 
                 type="button" 
                 class="btn btn-outline-secondary btn-lg px-4"

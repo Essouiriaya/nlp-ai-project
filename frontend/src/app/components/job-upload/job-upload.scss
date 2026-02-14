@@ -4,7 +4,6 @@ $success-color: #10b981;
 $border-radius: 1rem;
 $transition-speed: 0.3s;
 
-// Card Enhancements
 .card {
   transition: transform $transition-speed ease, box-shadow $transition-speed ease;
   
@@ -14,7 +13,6 @@ $transition-speed: 0.3s;
   }
 }
 
-// Form Controls Enhancement
 .form-control {
   border-radius: 0.5rem;
   border: 2px solid #e5e7eb;
@@ -31,17 +29,14 @@ $transition-speed: 0.3s;
   }
 }
 
-// Input Group Styling
 .input-group-text {
   border-radius: 0.5rem 0 0 0.5rem;
   border: 2px solid #e5e7eb;
   border-right: none;
 }
-
-// Button Enhancements
 .btn {
   border-radius: 0.5rem;
-  font-weight: 500;
+  font-weight: 400;
   transition: all $transition-speed ease;
   
   &-primary {
@@ -68,8 +63,6 @@ $transition-speed: 0.3s;
     }
   }
 }
-
-// Alert Animation
 .alert {
   animation: slideIn 0.4s ease-out;
   border-radius: $border-radius;
@@ -80,8 +73,6 @@ $transition-speed: 0.3s;
     color: #065f46;
   }
 }
-
-// Step Indicator
 .step-indicator {
   .badge {
     width: 2rem;
@@ -92,8 +83,6 @@ $transition-speed: 0.3s;
     font-size: 0.9rem;
   }
 }
-
-// Icon Wrapper
 .icon-wrapper {
   width: 80px;
   height: 80px;
@@ -104,8 +93,6 @@ $transition-speed: 0.3s;
   justify-content: center;
   margin: 0 auto;
 }
-
-// Animations
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -116,8 +103,6 @@ $transition-speed: 0.3s;
     transform: translateY(0);
   }
 }
-
-// Responsive Adjustments
 @media (max-width: 768px) {
   .card-body {
     padding: 1.5rem !important;
@@ -128,12 +113,10 @@ $transition-speed: 0.3s;
   }
 }
 
-// Character Counter Positioning
 .position-relative textarea {
   padding-bottom: 2rem;
 }
 
-// Focus States for Accessibility
 *:focus-visible {
   outline: 2px solid $primary-color;
   outline-offset: 2px;
