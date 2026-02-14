@@ -58,18 +58,6 @@
                 </button>
               </div>
             </div>
-            <div *ngIf="cvList.length > 0" class="col-12 col-lg-4">
-              <div class="d-flex justify-content-lg-end gap-3">
-                <div class="text-center text-lg-end">
-                  <div class="text-muted small">Candidats</div>
-                  <div class="h4 fw-bold text-dark mb-0">{{ cvList.length }}</div>
-                </div>
-                <div class="text-center text-lg-end">
-                  <div class="text-muted small">Score moyen</div>
-                  <div class="h4 fw-bold text-primary mb-0">{{ averageScore | number:'1.0-1' }}%</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div *ngIf="loading" class="card-body p-5">

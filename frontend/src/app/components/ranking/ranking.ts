@@ -53,8 +53,13 @@ export class RankingComponent implements OnInit {
 
     this.apiService.matchJob(this.selectedJobId).subscribe({
       next: (res) => {
-        this.cvList = res.ranking || []; 
+        this.cvList = res.ranking || [];
         this.cvList.sort((a, b) => b.score - a.score);
+
+        this.filteredCvList = [...this.cvList];
+
+        this.progressValue = 100;
+        clearInterval(this.progressInterval);
         this.loading = false;
       },
       error: (err) => {
